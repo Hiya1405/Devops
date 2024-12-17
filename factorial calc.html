@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+</head>
+<body>
+    <h1>Factorial Calculator</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number" required>
+    <button onclick="calculateFactorial()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateFactorial() {
+            var x = document.getElementById('numberInput').value;
+            document.getElementById('result').textContent = 'Factorial: ' + hi(x);
+        }
+
+        function hi(x) {
+            if (x === 0) {
+    return 1;
+} else {
+    return x * hi(x - 1);
+}
+
+        }
+    </script>
+</body>
+</html>
