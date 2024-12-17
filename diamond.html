@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Pattern</title>
+    <style>
+        pre {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <pre id="diamond"></pre>
+    <script>
+        function printDiamond(n) {
+            let diamond = '';
+            for (let i = 1; i <= n; i++) {
+                diamond += ' '.repeat(n - i) + '* '.repeat(i) + '\n';
+            }
+            for (let i = n - 1; i >= 1; i--) {
+                diamond += ' '.repeat(n - i) + '* '.repeat(i) + '\n';
+            }
+            return diamond;
+        }
+
+        const n = 5;
+        const diamondPattern = printDiamond(n);
+        document.getElementById('diamond').textContent = diamondPattern;
+    </script>
+</body>
+</html>
