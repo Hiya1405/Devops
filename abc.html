@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="C:\Users\Hiya\Desktop\bootstrap-clg\css\bootstrap.min.css"rel="stylesheet">
+    <title>Even or Odd</title>
 </head>
 <body>
-    <h1>Hiyaa</h1>
-    <h1>Hiyaa</h1>
-    <h1>Hiyaa</h1>
+    <h1>Hiya shah 187</h1>
+    <h2>Even or Odd Number Checker</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button type="button" class="btn btn-danger " onclick="checkEvenOdd()">Check</button>
+    <p id="result"></p>
+    
+    <script>
+        function checkEvenOdd() {
+            const number = document.getElementById('numberInput').value;
+            const result = document.getElementById('result');
+
+            if (number === '') {
+                result.textContent = 'Please enter a number.';
+                return;
+            }
+
+            const num = parseInt(number);
+
+            if (isNaN(num)) {
+                result.textContent = 'Please enter a valid number.';
+            } else if (num % 2 === 0) {
+                result.textContent = `${num} is an even number.`;
+            } else {
+                result.textContent = `${num} is an odd number.`;
+            }
+        }
+    </script>
 </body>
 </html>
