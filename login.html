@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pr(event) {
+            event.preventDefault();  // Prevent form submission
+            var x = document.getElementById('name').value;
+            var y = document.getElementById('pass').value;
+            document.write("Welcome, " + x + "<br>");
+            document.write("Password is " + y);
+        }
+    </script>
+    <form onsubmit="pr(event)">
+        <input id="name" type="text" name="name">
+        <input id="pass" type="password" name="password">
+        <input type="submit" value="LOGIN">
+    </form>
+</body>
+</html>
